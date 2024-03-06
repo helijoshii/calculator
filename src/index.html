@@ -1,13 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-  <h1 class=" bg-blue-400">
-    Hello world!
-  </h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="m-0 p-0 font-poppins box-border bg-[#e1c4f5]">
+      <div
+        id="container"
+        class="w-full h-screen flex items-center justify-center"
+      >
+        <div id="Calculator" class="p-5 bg-[#3a4452] rounded-lg">
+          <form>
+            <div id="display" class="flex justify-end my-5 mx-0">
+              <input
+                class="text-right flex-1 text-3xl shadow-none"
+                type="text"
+                name="display"
+              />
+            </div>
+            <div>
+              <input class="input" type="button" value="AC" />
+              <input class="input" type="button" value="DE" />
+              <input class="input" type="button" value="." />
+              <input class="input" type="button" value="/" />
+            </div>
+            <div>
+              <input
+                class="input"
+                type="button"
+                value="7"
+                onclick="display.value = '7'"
+              />
+              <input class="input" type="button" value="8" />
+              <input class="input" type="button" value="9" />
+              <input class="input" type="button" value="*" />
+            </div>
+            <div>
+              <input class="input" type="button" value="4" />
+              <input class="input" type="button" value="5" />
+              <input class="input" type="button" value="6" />
+              <input class="input" type="button" value="-" />
+            </div>
+            <div>
+              <input class="input" type="button" value="1" />
+              <input class="input" type="button" value="2" />
+              <input class="input" type="button" value="3" />
+              <input class="input" type="button" value="+" />
+            </div>
+            <div>
+              <input class="input" type="button" value="00" />
+              <input class="input" type="button" value="0" />
+              <input
+                style="width: 150px"
+                class="input w-36"
+                type="button"
+                value="="
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
