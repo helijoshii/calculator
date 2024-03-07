@@ -13,62 +13,159 @@
     />
   </head>
   <body>
-    <div class="m-0 p-0 font-poppins box-border bg-[#e1c4f5]">
+    <div class="m-0 p-0 font-poppins box-border">
       <div
         id="container"
-        class="w-full h-screen flex items-center justify-center"
+        class="w-full h-screen bg-[#e1c4f5] flex items-center justify-center"
       >
-        <div id="Calculator" class="p-5 bg-[#3a4452] rounded-lg">
+        <div id="calculator" class="p-5 rounded-lg">
+          <!-- <div class="flex justify-end">
+            <div class="w-8 h-8 rounded-full bg-white"></div>
+          </div> -->
+
+          <button
+            id="mode-toggle"
+            class="fixed top-0 right-0 m-4 bg-gray-800 text-white px-4 py-2 rounded-md"
+          >
+            Toggle Mode
+          </button>
           <form>
             <div id="display" class="flex justify-end my-5 mx-0">
               <input
-                class="text-right flex-1 text-3xl shadow-none"
+                class="input text-right flex-1 text-3xl shadow-none h-20"
                 type="text"
                 name="display"
               />
             </div>
             <div>
-              <input class="input" type="button" value="AC" />
-              <input class="input" type="button" value="DE" />
-              <input class="input" type="button" value="." />
-              <input class="input" type="button" value="/" />
+              <input
+                class="input operator"
+                type="button"
+                value="AC"
+                onclick="display.value = ''"
+              />
+              <input
+                class="input operator"
+                type="button"
+                value="DE"
+                onclick="display.value = display.value.toString().slice(0,-1)"
+              />
+              <input
+                class="input operator"
+                type="button"
+                value="."
+                onclick="display.value += '.'"
+              />
+              <input
+                class="input operator"
+                type="button"
+                value="/"
+                onclick="display.value += '/'"
+              />
             </div>
             <div>
               <input
                 class="input"
                 type="button"
                 value="7"
-                onclick="display.value = '7'"
+                onclick="display.value += '7'"
               />
-              <input class="input" type="button" value="8" />
-              <input class="input" type="button" value="9" />
-              <input class="input" type="button" value="*" />
+              <input
+                class="input"
+                type="button"
+                value="8"
+                onclick="display.value += '8'"
+              />
+              <input
+                class="input"
+                type="button"
+                value="9"
+                onclick="display.value += '9'"
+              />
+              <input
+                class="input operator"
+                type="button"
+                value="*"
+                onclick="display.value += '*'"
+              />
             </div>
             <div>
-              <input class="input" type="button" value="4" />
-              <input class="input" type="button" value="5" />
-              <input class="input" type="button" value="6" />
-              <input class="input" type="button" value="-" />
+              <input
+                class="input"
+                type="button"
+                value="4"
+                onclick="display.value += '4'"
+              />
+              <input
+                class="input"
+                type="button"
+                value="5"
+                onclick="display.value += '5'"
+              />
+              <input
+                class="input"
+                type="button"
+                value="6"
+                onclick="display.value += '6'"
+              />
+              <input
+                class="input operator"
+                type="button"
+                value="-"
+                onclick="display.value += '-'"
+              />
             </div>
             <div>
-              <input class="input" type="button" value="1" />
-              <input class="input" type="button" value="2" />
-              <input class="input" type="button" value="3" />
-              <input class="input" type="button" value="+" />
+              <input
+                class="input"
+                type="button"
+                value="1"
+                onclick="display.value += '1'"
+              />
+              <input
+                class="input"
+                type="button"
+                value="2"
+                onclick="display.value += '2'"
+              />
+              <input
+                class="input"
+                type="button"
+                value="3"
+                onclick="display.value += '3'"
+              />
+              <input
+                class="input operator"
+                type="button"
+                value="+"
+                onclick="display.value += '+'"
+              />
             </div>
             <div>
-              <input class="input" type="button" value="00" />
-              <input class="input" type="button" value="0" />
+              <input
+                class="input"
+                type="button"
+                value="00"
+                onclick="display.value += '00'"
+              />
+              <input
+                class="input"
+                type="button"
+                value="0"
+                onclick="display.value += '0'"
+              />
               <input
                 style="width: 150px"
-                class="input w-36"
+                class="input w-36 operator"
                 type="button"
                 value="="
+                onclick="display.value = eval(display.value)"
               />
             </div>
           </form>
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
